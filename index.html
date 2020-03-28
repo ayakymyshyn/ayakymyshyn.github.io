@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>5ive Solutions</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="big-heading-section">
+      <nav id="main-navigation">
+        <a href="#" class="main-logo"><img src="/img/logo.svg" alt=""/></a>
+        <div class="menu-items">
+          <ul class="top-navigation">
+            <li><a href="#">Профіль</a></li>
+            <li><a href="#">Послуги</a></li>
+            <li><a href="#">Проекти</a></li>
+            <li><a href="#">Контакт</a></li>
+            <ul class="language-switcher">
+              <li>
+                <a href="#" class="current-lang">Eng</a>
+                <ul class="switcher-submenu">
+                  <li><a href="#">Rus</a></li>
+                </ul>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+      <div class="big-heading-content">
+        <h2 class="big-heading">
+          5ive solutions
+        </h2>
+        <h2 class="big-heading second-heading">
+          is a
+          <span class="txt-rotate" data-period="2000">web agency</span>
+        </h2>
+      </div>
+    </section>
+  </body>
+  <script src="/js/three.r95.min.js"></script>
+  <script src="/js/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#big-heading-section",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0xf9f9f9,
+      backgroundColor: 0x0
+    });
+  </script>
+</html>
