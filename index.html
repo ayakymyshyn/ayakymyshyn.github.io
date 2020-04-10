@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section id="big-heading-section">
-      <nav id="main-navigation">
-        <a href="#" class="main-logo"><img src="/img/logo.svg" alt=""/></a>
-        <div class="menu-items">
-          <ul class="top-navigation">
-            <li><a href="#">Профіль</a></li>
-            <li><a href="#">Послуги</a></li>
-            <li><a href="#">Проекти</a></li>
-            <li><a href="#">Контакт</a></li>
+    <section id="first-section">
+      <div class="global-wrapper">
+        <nav id="main-navigation">
+          <a href="#" class="main-logo"><img src="/img/logo.svg" alt="" /></a>
+          <ul class="main-menu">
+            <li><a href="#" class="menu-item">Профіль</a></li>
+            <li><a href="#" class="menu-item">Послуги</a></li>
+            <li><a href="#" class="menu-item">Проекти</a></li>
+            <li><a href="#" class="menu-item">Контакт</a></li>
+            <li>
+              <a href="#" class="btn-transparent menu-item"
+                >Проконсультуватися</a
+              >
+            </li>
             <ul class="language-switcher">
               <li>
                 <a href="#" class="current-lang">Eng</a>
@@ -25,32 +30,42 @@
               </li>
             </ul>
           </ul>
+        </nav>
+        <div class="fs-content-wrapper">
+          <div class="text-content">
+            <h2 class="first-section-header">
+              розробимо вам<br />сайт під ключ
+            </h2>
+            <h4 class="first-section-subheader">
+              Наші 5 solutions збільшують продажі,<br />
+              знаходять нових клієнтів та формують<br />
+              репутацію
+            </h4>
+            <a class="fs-get-offer">Отримати пропозицію</a>
+            <div id="empty"></div>
+          </div>
         </div>
-      </nav>
-      <div class="big-heading-content">
-        <h2 class="big-heading">
-          5ive solutions
-        </h2>
-        <h2 class="big-heading second-heading">
-          is a
-          <span class="txt-rotate" data-period="2000">web agency</span>
-        </h2>
       </div>
     </section>
   </body>
   <script src="/js/three.r95.min.js"></script>
-  <script src="/js/vanta.net.min.js"></script>
+  <script src="/js/vanta.birds.min.js"></script>
   <script>
-    VANTA.NET({
-      el: "#big-heading-section",
+    VANTA.BIRDS({
+      el: "#first-section",
       mouseControls: true,
       touchControls: true,
       minHeight: 200.0,
       minWidth: 200.0,
       scale: 1.0,
       scaleMobile: 1.0,
-      color: 0xf9f9f9,
-      backgroundColor: 0x0
+      backgroundColor: 0xf5f5f5,
+      color1: 0x0,
+      color2: 0xffdcf4,
+      colorMode: "lerpGradient",
+      birdSize: 1.7,
+      separation: 38.0,
+      quantity: 4.0,
     });
   </script>
 </html>
