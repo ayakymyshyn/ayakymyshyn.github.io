@@ -10,7 +10,9 @@
     <section id="first-section">
       <div class="global-wrapper">
         <nav id="main-navigation">
-          <a href="#" class="main-logo"><img src="/img/logo.svg" alt="" /></a>
+          <a href="#" class="main-logo"
+            ><img src="/img/logo.svg" alt=""
+          /></a>
           <ul class="main-menu">
             <li><a href="#" class="menu-item">Профіль</a></li>
             <li><a href="#" class="menu-item">Послуги</a></li>
@@ -21,20 +23,26 @@
                 >Проконсультуватися</a
               >
             </li>
-            <ul class="language-switcher">
-              <li>
-                <a href="#" class="current-lang">Eng</a>
-                <ul class="switcher-submenu">
-                  <li><a href="#">Rus</a></li>
-                </ul>
-              </li>
-            </ul>
           </ul>
+          <div class="mobile-nav-trigger">
+            <span class="closed">menu</span>
+            <span class="opened"
+              ><img src="/img/close-white.svg" alt=""
+            /></span>
+            <div class="mobile-menu-overlay">
+              <ul class="mobile-menu-items">
+                <li><a href="">Профіль</a></li>
+                <li><a href="">Послуги</a></li>
+                <li><a href="">Проекти</a></li>
+                <li><a href="">Контакт</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
         <div class="fs-content-wrapper">
           <div class="text-content">
             <h2 class="first-section-header">
-              розробимо вам<br />сайт під ключ
+              розробимо вам<br class="text-break" />сайт під ключ
             </h2>
             <h4 class="first-section-subheader">
               Наші 5 solutions збільшують продажі,<br />
@@ -42,12 +50,12 @@
               репутацію
             </h4>
             <a class="fs-get-offer">Отримати пропозицію</a>
-            <div id="empty"></div>
           </div>
         </div>
       </div>
     </section>
   </body>
+  <script src="/js/main.js"></script>
   <script src="/js/three.r95.min.js"></script>
   <script src="/js/vanta.birds.min.js"></script>
   <script>
