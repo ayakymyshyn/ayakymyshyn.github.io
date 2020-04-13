@@ -14,4 +14,14 @@ window.addEventListener('DOMContentLoaded', () => {
         closeIcon.classList.remove('db');
         logo.classList.remove('white');
     });
+    window.addEventListener('scroll', () => {
+        let secondSection = document.getElementById('second-section');
+        if (window.pageYOffset > 300) {
+            secondSection.classList.add('black-section');
+        }
+        else {
+            if (secondSection.classList.contains('black-section'))
+                secondSection.classList.remove('black-section');
+        }
+    });
 });

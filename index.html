@@ -5,59 +5,204 @@
     <meta name="viewport" content="width=device-width" />
     <title>5ive Solutions</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <section id="first-section">
-      <div class="global-wrapper">
-        <nav id="main-navigation">
-          <a href="#" class="main-logo"
-            ><img src="/img/logo.svg" alt=""
-          /></a>
-          <ul class="main-menu">
-            <li><a href="#" class="menu-item">Профіль</a></li>
-            <li><a href="#" class="menu-item">Послуги</a></li>
-            <li><a href="#" class="menu-item">Проекти</a></li>
-            <li><a href="#" class="menu-item">Контакт</a></li>
-            <li>
-              <a href="#" class="btn-transparent menu-item"
-                >Проконсультуватися</a
-              >
-            </li>
-          </ul>
-          <div class="mobile-nav-trigger">
-            <span class="closed">menu</span>
-            <span class="opened"
-              ><img src="/img/close-white.svg" alt=""
-            /></span>
-            <div class="mobile-menu-overlay">
-              <ul class="mobile-menu-items">
-                <li><a href="">Профіль</a></li>
-                <li><a href="">Послуги</a></li>
-                <li><a href="">Проекти</a></li>
-                <li><a href="">Контакт</a></li>
-              </ul>
+    <div id="container">
+      <section id="first-section">
+        <div class="fs-wrapper">
+          <nav id="main-navigation">
+            <a href="#" class="main-logo"><img src="/img/logo.svg" alt="" /></a>
+            <ul class="main-menu">
+              <li><a href="#" class="menu-item">Профіль</a></li>
+              <li><a href="#" class="menu-item">Послуги</a></li>
+              <li><a href="#" class="menu-item">Проекти</a></li>
+              <li><a href="#" class="menu-item">Контакт</a></li>
+              <li>
+                <a href="#" class="btn-transparent menu-item"
+                  >Проконсультуватися</a
+                >
+              </li>
+            </ul>
+            <div class="mobile-nav-trigger">
+              <span class="closed">menu</span>
+              <span class="opened"
+                ><img src="/img/close-white.svg" alt=""
+              /></span>
+              <div class="mobile-menu-overlay">
+                <ul class="mobile-menu-items">
+                  <li><a href="">Профіль</a></li>
+                  <li><a href="">Послуги</a></li>
+                  <li><a href="">Проекти</a></li>
+                  <li><a href="">Контакт</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="fs-content-wrapper">
+            <div class="text-content">
+              <h2 class="first-section-header">
+                розробимо вам<br class="text-break" />сайт під ключ
+              </h2>
+              <h4 class="first-section-subheader">
+                Наші 5 solutions збільшують продажі,<br />
+                знаходять нових клієнтів та формують<br />
+                репутацію
+              </h4>
+              <a class="fs-get-offer">Отримати пропозицію</a>
             </div>
           </div>
-        </nav>
-        <div class="fs-content-wrapper">
-          <div class="text-content">
-            <h2 class="first-section-header">
-              розробимо вам<br class="text-break" />сайт під ключ
-            </h2>
-            <h4 class="first-section-subheader">
-              Наші 5 solutions збільшують продажі,<br />
-              знаходять нових клієнтів та формують<br />
-              репутацію
-            </h4>
-            <a class="fs-get-offer">Отримати пропозицію</a>
+        </div>
+      </section>
+      <section id="second-section">
+        <div class="ss-wrapper">
+          <ul class="ss-tags">
+            <li>strategy</li>
+            <li>design</li>
+            <li>technology</li>
+          </ul>
+          <div class="full-width-underline"></div>
+          <h2 class="ss-heading">наші проєкти</h2>
+          <div class="portfolio-items">
+            <div
+              class="portfolio-item flex-end mb-120"
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <h3 class="item-title">devops-wis®</h3>
+              <div class="portfolio-img">
+                <div class="underline"></div>
+                <div class="portfolio-item-img">
+                  <a href="#"><img src="/img/devopswis.png" alt="DevOps" /></a>
+                </div>
+                <div class="overlay">
+                  <div class="text">переглянути проект</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="portfolio-item mb-120"
+              data-aos="fade-up"
+              data-aos-duration="300"
+            >
+              <h3 class="item-title">all technology conferences®</h3>
+              <div class="portfolio-img">
+                <div class="underline"></div>
+                <div class="portfolio-item-img">
+                  <a href="#"
+                    ><img
+                      src="/img/all-technology.png"
+                      alt="all technology conferences"
+                      class="portfolio-item-img"
+                  /></a>
+                </div>
+                <div class="overlay">
+                  <div class="text">переглянути проект</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="portfolio-item mb-120"
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+            >
+              <h3 class="item-title">Exclusivestuff®</h3>
+              <div class="portfolio-img">
+                <div class="underline"></div>
+                <div class="portfolio-item-img">
+                  <a href="#"
+                    ><img
+                      src="/img/exclusivestuff.png"
+                      class="portfolio-item-img"
+                      alt="Exclusivestuff®"
+                  /></a>
+                </div>
+                <div class="overlay">
+                  <div class="text">переглянути проект</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="portfolio-item"
+              data-aos="fade-left"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <h3 class="item-title">katerina khomychuk®</h3>
+              <div class="portfolio-img">
+                <div class="underline"></div>
+                <div class="portfolio-item-img">
+                  <a href="#"
+                    ><img
+                      src="/img/khomychuk.jpg"
+                      class="portfolio-item-img"
+                      alt="katerina khomychuk"
+                  /></a>
+                </div>
+
+                <div class="overlay">
+                  <div class="text">переглянути проект</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="portfolio-item flex-end"
+              data-aos="fade-up"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <h3 class="item-title">zakopane.transfer®</h3>
+              <div class="portfolio-img">
+                <div class="underline"></div>
+                <div class="portfolio-item-img">
+                  <a href="#"
+                    ><img
+                      src="/img/zakopane.png"
+                      class="portfolio-item-img"
+                      alt="zakopane"
+                  /></a>
+                </div>
+                <div class="overlay">
+                  <div class="text">переглянути проект</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="portfolio-item"
+              data-aos="fade-right"
+              data-aos-anchor="#example-anchor"
+              data-aos-offset="500"
+              data-aos-duration="500"
+            >
+              <h3 class="item-title">CONTEMPORARY ART MUSEUM®</h3>
+              <div class="portfolio-img">
+                <div class="underline"></div>
+                <div class="portfolio-item-img">
+                  <a href="#"
+                    ><img
+                      src="/img/mocak.png"
+                      class="portfolio-item-img"
+                      alt="mocak"
+                  /></a>
+                </div>
+                <div class="overlay">
+                  <div class="text">переглянути проект</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   </body>
   <script src="/js/main.js"></script>
   <script src="/js/three.r95.min.js"></script>
   <script src="/js/vanta.birds.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     VANTA.BIRDS({
       el: "#first-section",
@@ -75,5 +220,6 @@
       separation: 38.0,
       quantity: 4.0,
     });
+    AOS.init();
   </script>
 </html>
