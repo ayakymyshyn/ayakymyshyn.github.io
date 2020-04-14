@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let itemTitle = document.querySelectorAll('.item-title');
         let itemUnderline = document.querySelectorAll('.underline');
 
-        if (window.pageYOffset > 480) {
+        if (window.pageYOffset > 470) {
             addClass(secondSection, 'black-section');
             addClass(underline, 'pink-background');
             addClass(heading, 'color-pink');
