@@ -1,4 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.loader-wrapper').classList.add('hidden');
+    document.body.classList.add('allow-scroll');
     let mobileMenuTrigger = document.querySelector('.closed');
     let closeIcon = document.querySelector('.opened');
     let mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
