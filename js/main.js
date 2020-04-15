@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let closeIcon = document.querySelector('.opened');
     let mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     let logo = document.querySelector('.main-logo');
-
+    
     mobileMenuTrigger.addEventListener('click', () => {
         addClass(mobileMenuOverlay, 'visible');
         addClass(closeIcon, 'db');
