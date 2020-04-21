@@ -200,7 +200,7 @@
           </div>
         </div>
       </section>
-      <section id="third-section">
+      <section id="third-section" class="black-section">
         <div class="ss-wrapper">
           <h2 class="third-section-heading">
             Не треба нікуди йти, у нас вже є 5SOLUTIONS
@@ -303,7 +303,9 @@
             </div>
           </div>
           <a class="discuss-details-btn" href="#">обговорити деталі</a>
-          <a class="open-calculator-btn">калькулятор ціни</a>
+          <a class="open-calculator-btn" data-micromodal-trigger="modal-1"
+            >калькулятор ціни</a
+          >
         </div>
       </section>
     </div>
@@ -315,11 +317,62 @@
       />
       <img src="/img/logo.svg" alt="Five Solutions" class="white" />
     </div>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <header class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">
+              Micromodal
+            </h2>
+            <img
+              src="/img/close-white.svg"
+              alt="close"
+              data-micromodal-close
+              class="modal__close"
+            />
+          </header>
+          <main class="modal__content" id="modal-1-content">
+            <h2>Що входить в ціну?</h2>
+            <h2 class="second-h">від 950$</h2>
+            <div class="modal-inner-wrapper">
+              <div class="left-modal">
+                <p>
+                  В ціну входить дизайн розрбка стратегія Шо мені дасть для мого
+                  бізнесу? Чи мені це підходить? Що входить в ціну? за шо я буду
+                  платити? Збільшить конверсію та клієнтську базу. Підхійодить
+                  для компанії, що входить на ринок.
+                </p>
+              </div>
+              <div class="right-modal">
+                <p>
+                  Шо мені дасть для мого бізнесу? Чи мені це підходить? Що
+                  входить в ціну? за шо я буду платити? Збільшить конверсію та
+                  клієнтську базу. Підхійодить для компанії, що входить на
+                  ринок.
+                </p>
+                <div class="modal-btns">
+                  <a class="make-request-btn pink">Зробити запит→</a>
+                  <a class="make-request-btn pink-border">Калькулятор ціни</a>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer class="modal__footer">
+          </footer>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="/js/main.js"></script>
   <script src="/js/three.r95.min.js"></script>
   <script src="/js/vanta.birds.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
   <script>
     VANTA.BIRDS({
       el: "#first-section",
@@ -338,5 +391,6 @@
       quantity: 4.0,
     });
     AOS.init();
+    MicroModal.init();
   </script>
 </html>

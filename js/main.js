@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let closeIcon = document.querySelector('.opened');
     let mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     let logo = document.querySelector('.main-logo');
-    
+
     mobileMenuTrigger.addEventListener('click', () => {
         addClass(mobileMenuOverlay, 'visible');
         addClass(closeIcon, 'db');
@@ -23,7 +23,16 @@ window.addEventListener('DOMContentLoaded', () => {
         let heading = document.querySelector('.ss-heading');
         let itemTitle = document.querySelectorAll('.item-title');
         let itemUnderline = document.querySelectorAll('.underline');
+        let thirdSection = document.querySelector('#third-section');
+        let thirdHeading = document.querySelector('.third-section-heading');
 
+        let scrollIdx = 0;
+
+        if (screen.width < 450) {
+            scrollIdx = 975;
+        } else {
+            scrollIdx = 1700;
+        }
         if (window.pageYOffset > 470) {
             addClass(secondSection, 'black-section');
             addClass(underline, 'pink-background');
@@ -39,6 +48,14 @@ window.addEventListener('DOMContentLoaded', () => {
             itemUnderline.forEach(underline => removeClass(underline, 'pink-background'));
             tags.forEach(tag => removeClass(tag, 'color-pink'));
             itemTitle.forEach(title => removeClass(title, 'color-pink'));
+        }
+        if (window.pageYOffset > scrollIdx) {
+            removeClass(thirdSection, 'black-section');
+            removeClass(thirdHeading, 'color-pink');
+        }
+        else {
+            addClass(thirdSection, 'black-section');
+            addClass(thirdHeading, 'color-pink');
         }
     });
 });
