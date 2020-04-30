@@ -6,6 +6,20 @@ window.addEventListener('DOMContentLoaded', () => {
     let mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     let logo = document.querySelector('.main-logo');
 
+    var acc = document.getElementsByClassName("accordion");
+    var panels = document.querySelectorAll('.panel');
+    var i;
+    addClass(panels[0], "active");
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            var panel = this.nextElementSibling;
+            panels.forEach(panel => {
+                removeClass(panel, "active");
+            });
+            panel.classList.toggle("active");
+        });
+    }
     mobileMenuTrigger.addEventListener('click', () => {
         addClass(mobileMenuOverlay, 'visible');
         addClass(closeIcon, 'db');
@@ -29,9 +43,9 @@ window.addEventListener('DOMContentLoaded', () => {
         let scrollIdx = 0;
 
         if (screen.width < 450) {
-            scrollIdx = 975;
+            scrollIdx = 1150;
         } else {
-            scrollIdx = 1700;
+            scrollIdx = 2100;
         }
         if (window.pageYOffset > 470) {
             addClass(secondSection, 'black-section');
