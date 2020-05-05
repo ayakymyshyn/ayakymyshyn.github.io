@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let closeIcon = document.querySelector('.opened');
     let mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
     let logo = document.querySelector('.main-logo');
+    let baggedBtn = document.querySelector('a.fs-get-offer');
 
     var acc = document.getElementsByClassName("accordion");
     var panels = document.querySelectorAll('.panel');
@@ -23,12 +24,16 @@ window.addEventListener('DOMContentLoaded', () => {
     mobileMenuTrigger.addEventListener('click', () => {
         addClass(mobileMenuOverlay, 'visible');
         addClass(closeIcon, 'db');
-        addClass(logo, 'white');
+        removeClass(logo, 'white');
+        document.body.classList.remove('allow-scroll');
+        addClass(baggedBtn, 'hidden');
     });
     closeIcon.addEventListener('click', () => {
         mobileMenuOverlay.classList.remove('visible');
         closeIcon.classList.remove('db');
-        logo.classList.remove('white');
+        addClass(logo, 'white');
+        document.body.classList.add('allow-scroll');
+        removeClass(baggedBtn, 'hidden');
     });
     window.addEventListener('scroll', () => {
         let secondSection = document.getElementById('second-section');
