@@ -52,12 +52,14 @@ window.addEventListener('DOMContentLoaded', () => {
         let activePanel = document.querySelector('.panel.active');
         let fixedNav = document.querySelector('.fixed-nav');
 
-        console.log(window.pageYOffset);
-        if (window.pageYOffset > 200) {
+
+        if (this.oldScroll > this.scrollY && window.pageYOffset > 200) {
             addClass(fixedNav, 'display-menu');
         } else {
             removeClass(fixedNav, 'display-menu');
         }
+        this.oldScroll = this.scrollY;
+
 
         if (window.pageYOffset > (thirdHeading.offsetTop - 300)) {
             removeClass(thirdSection, 'black-section');
@@ -89,4 +91,4 @@ const removeClassFromElements = (elements, className) => {
     elements.length > 0 && elements.forEach(element => {
         removeClass(element, className);
     });
-}; 
+};
