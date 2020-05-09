@@ -43,15 +43,15 @@ window.addEventListener('DOMContentLoaded', () => {
             panel.classList.toggle("active");
             addClass(knowMoreAccBtns[i], 'hidden');
         });
-
     }
+
+    
     window.addEventListener('scroll', () => {
-        let accordion = document.querySelector('.accordion');
+        let accordions = document.querySelectorAll('.accordion');
         let thirdSection = document.querySelector('#third-section');
         let thirdHeading = document.querySelector('.third-section-heading');
-        let activePanel = document.querySelector('.panel.active');
         let fixedNav = document.querySelector('.fixed-nav');
-
+        let activePanel = document.querySelector('.panel.active');
 
         if (this.oldScroll > this.scrollY && window.pageYOffset > 200) {
             addClass(fixedNav, 'display-menu');
@@ -63,13 +63,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
         if (window.pageYOffset > (thirdHeading.offsetTop - 300)) {
             removeClass(thirdSection, 'black-section');
-            removeClass(accordion, 'border-pink');
-            removeClassFromElements([thirdHeading, accordion, activePanel], 'color-pink');
+            accordions.forEach(accordion => {
+                removeClass(accordion, 'border-pink');
+                removeClass(accordion, 'color-pink');
+            });
+            removeClassFromElements([thirdHeading, activePanel], 'color-pink');
         }
         else {
             addClass(thirdSection, 'black-section');
-            addClass(accordion, 'border-pink');
-            addClassToElements([thirdHeading, accordion, activePanel], 'color-pink');
+            accordions.forEach(accordion => {
+                addClass(accordion, 'border-pink');
+                addClass(accordion, 'color-pink');
+            });
+            addClassToElements([thirdHeading, activePanel], 'color-pink');
         }
     });
 });
