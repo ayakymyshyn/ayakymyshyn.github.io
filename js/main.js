@@ -45,7 +45,6 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
     window.addEventListener('scroll', () => {
         let accordions = document.querySelectorAll('.accordion');
         let thirdSection = document.querySelector('#third-section');
@@ -77,6 +76,59 @@ window.addEventListener('DOMContentLoaded', () => {
             });
             addClassToElements([thirdHeading, activePanel], 'color-pink');
         }
+    });
+
+    let fiveReasonsImages = document.querySelectorAll('.first-image');
+    let aboutUsDetails = document.querySelector('.about-us-details');
+    let aboutUsList = document.querySelectorAll('.about-us-list li');
+    let paragraph = document.querySelector(".about-us-description p");
+
+    let text2 = "Lorem2";
+    let text3 = "Lorem3";
+    let text4 = "Lorem4";
+    let tex5 = "Lorem5";
+
+    let texts = [
+        "Такой сайт будет только у Вас и у Майкла Джексона - шутка :) Но с долей правды. Наличие в команде опытного дизайнера подразумевает разработку авторского дизайна, которого вы больше не встретите на просторах Интернета. Авторский дизайн позволяет выделиться на фоне конкурентов и стать заметнее и интереснее для потенциальных клиентов.",
+        "Lorem2", "Lorem3", "Lorem4", "Lorem5"
+    ];
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let imgX = 0;
+    let imgY = 6000;
+
+    let speed = 0.05;
+    let targetOffset = 0;
+
+
+    const animate = () => {
+        if (screen.width > 450) {
+            let distX = 0;
+            let distY = 0;
+            if (mouseX > 0 && mouseY > 0) {
+                distX = mouseX - imgX;
+                distY = mouseY - imgY;
+            }
+            imgX = imgX + (distX * speed);
+            imgY = imgY + (distY * speed);
+            fiveReasonsImages.forEach(img => {
+                img.style.left = imgX + "px";
+                img.style.top = imgY + "px";
+            });
+        }
+    };
+
+    aboutUsList.forEach((li, idx) => {
+        li.addEventListener('mousemove', (e) => {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+            animate();
+        });
+        li.addEventListener('click', () => {
+            paragraph.innerHTML = texts[idx];
+        })
     });
 });
 
