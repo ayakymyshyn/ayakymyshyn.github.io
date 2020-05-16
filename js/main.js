@@ -169,7 +169,7 @@ window.addEventListener('DOMContentLoaded', () => {
     modalSendButton && modalSendButton.addEventListener('click', (e) => {
         e.preventDefault();
         console.log(modalPhone.value);
-        if (isEmpty(modalName.value) || isEmpty(modalPhone.value.replace(' ', '').replace('(', '').replace(')', ''))) {
+        if (isEmpty(modalName.value) || isEmpty(modalPhone.value)) {
             notificationMessage.innerHTML = "Поля не могут быть пустыми."
             notification.classList.add('db');
         } else if (isPhoneIncorrect(phone.value)) {
@@ -188,7 +188,7 @@ window.addEventListener('DOMContentLoaded', () => {
     sendButton && sendButton.addEventListener('click', (e) => {
         e.preventDefault();
         console.log(phone.value);
-        if (isEmpty(name.value) || isEmpty(phone.value.replace(' ', '').replace('(', '').replace(')', ''))) {
+        if (isEmpty(name.value) || isEmpty(phone.value)) {
             notificationMessage.innerHTML = "Поля не могут быть пустыми."
             notification.classList.add('db');
         } else if (isPhoneIncorrect(phone.value)) {
@@ -239,7 +239,7 @@ const sendMessage = async (token, chatID, text, callback) => {
 };
 const isPhoneIncorrect = phone => {
     console.log(phone.length);
-    return phone.length > 21 || phone.length < 10;
+    return phone.length < 10 || phone.length > 21;
 };
 
 const isEmpty = field => {
