@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let panels = document.querySelectorAll('.panel');
     let knowMoreAccBtns = document.querySelectorAll('.accordion-flex-container .accordion-text .accordion-know-more');
 
-
     if (loader) {
         loader.classList.add('hidden');
     }
@@ -120,17 +119,63 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const setDefaultPosition = () => {
+        fiveReasonsImages.forEach(img => {
+            img.style.left = -2000 + "px";
+        });
+    };
+
     aboutUsList.forEach((li, idx) => {
         li.addEventListener('mousemove', (e) => {
             mouseX = e.pageX;
             mouseY = e.pageY;
             animate();
         });
+        li.addEventListener('mouseout', () => {
+            setDefaultPosition();
+        });
         li.addEventListener('click', () => {
             paragraph.innerHTML = texts[idx];
         })
     });
+
+    // sending message to a Telegram
+    let name = document.querySelector('input.name-input');
+    let phone = document.querySelector('input.phone-input');
+    let sendButton = document.querySelector('.send-form-btn');
+    let notification = document.querySelector('.notification');
+    let notificationMessage = document.querySelector('.notification-message');
+    let closeNotification = document.querySelector('.close-notification img');
+
+    let token = '1263033682:AAF9Yq8t1x2hbeqpZ_TVXsxAbNkg1L8vt-s';
+    let chat_id = '-1001320284865';
+
+    sendButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(phone.value.replace(' ', '').replace('(', '').replace(')', ''));
+        console.log(phone.value);
+        if (isEmpty(name.value) || isEmpty(phone.value.replace(' ', '').replace('(', '').replace(')', ''))) {
+            notificationMessage.innerHTML = "Поля не могут быть пустыми."
+            notification.classList.add('db');
+        } else if (isPhoneIncorrect(phone.value)) {
+            notificationMessage.innerHTML = "Неверный формат номера телефона"
+            notification.classList.add('db');
+        } else {
+            let text = `Ім'я: ${name.value}, Номер телефону: ${phone.value}`;
+            sendMessage(token, chat_id, text, () => {
+                notificationMessage.innerHTML = "Сообщение отправлено успешно!"
+                notification.classList.add('db');
+            });
+            removeClass(notification, 'db');
+        }
+    });
+
+    closeNotification.addEventListener('click', () => {
+        removeClass(notification, 'db');
+    });
+
 });
+
 
 // helpers 
 
@@ -149,4 +194,20 @@ const removeClassFromElements = (elements, className) => {
     elements.length > 0 && elements.forEach(element => {
         removeClass(element, className);
     });
+};
+const sendMessage = async (token, chatID, text, callback) => {
+    const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatID}&text=${text}`);
+    const statusData = await response.json();
+    if (statusData.ok) {
+        callback();
+    }
+    console.log(statusData);
+};
+const isPhoneIncorrect = phone => {
+    console.log(phone.length);
+    return phone.length > 21 || phone.length < 10;
+};
+
+const isEmpty = field => {
+    return field.length < 1;
 };
