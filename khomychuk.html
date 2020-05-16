@@ -13,29 +13,92 @@
     <section id="portfolio-case">
       <div class="ss-wrapper">
         <nav id="main-navigation">
-          <a href="/" class="main-logo portfolio-main-logo"><img src="/img/logo.svg" alt="" /></a>
-          <ul class="main-menu">
+          <a href="/" class="main-logo portfolio-main-logo"
+            ><img src="/img/logo.svg" alt=""
+          /></a>
+          <ul class="main-menu case-menu">
             <li><a href="#" class="menu-item">Профіль</a></li>
             <li><a href="#" class="menu-item">Послуги</a></li>
             <li><a href="#" class="menu-item">Проекти</a></li>
             <li><a href="#" class="menu-item">Контакт</a></li>
             <li>
-              <a href="#" class="btn-transparent menu-item"
+              <a href="#" data-micromodal-trigger="modal-1" class="btn-transparent menu-item case-transparent-btn"
                 >Проконсультуватися</a
               >
             </li>
           </ul>
           <div class="mobile-nav-trigger portfolio-mobile-trigger">
-            <span class="closed">menu</span>
+            <span class="closed case-trigger">menu</span>
             <span class="opened"
-              ><img src="/img/close-white.svg" alt=""
+              ><img src="/img/close-black.svg" alt=""
             /></span>
             <div class="mobile-menu-overlay">
               <ul class="mobile-menu-items">
-                <li><a href="">Профіль</a></li>
-                <li><a href="">Послуги</a></li>
-                <li><a href="">Проекти</a></li>
-                <li><a href="">Контакт</a></li>
+                <li>
+                  <a href="#second-section" class="menu-item mobile-menu-item"
+                    >Проекты</a
+                  >
+                </li>
+                <li>
+                  <a href="#third-section" class="menu-item mobile-menu-item"
+                    >Услуги</a
+                  >
+                </li>
+                <li>
+                  <a href="#why-we" class="menu-item mobile-menu-item"
+                    >Почему мы</a
+                  >
+                </li>
+                <li>
+                  <a href="#footer" class="menu-item mobile-menu-item"
+                    >Контакт</a
+                  >
+                </li>
+              </ul>
+              <div class="mobile-social-media">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <nav id="main-navigation" class="fixed-nav">
+          <a href="/" class="main-logo">
+            <img
+              src="/img/logo.svg"
+              alt="5Solutions"
+              class="desktop white fixed-logo" />
+            <img
+              src="/img/logo-mobile.png"
+              alt="5Solutions"
+              class="mobile white fixed-logo"
+          /></a>
+          <ul class="main-menu fixed-main-menu">
+            <li><a href="#second-section" class="menu-item">Проекты</a></li>
+            <li><a href="#third-section" class="menu-item">Услуги</a></li>
+            <li><a href="#why-we" class="menu-item">Почему мы</a></li>
+            <li><a href="#footer" class="menu-item">Контакт</a></li>
+            <li>
+              <a
+                href="#"
+                data-micromodal-trigger="modal-1"
+                class="btn-transparent menu-item"
+                >Проконсультироваться</a
+              >
+            </li>
+          </ul>
+          <div class="mobile-nav-trigger">
+            <span class="closed fixed-closed">menu</span>
+            <span class="opened"
+              ><img src="/img/close-black.svg" alt=""
+            /></span>
+            <div class="mobile-menu-overlay">
+              <ul class="mobile-menu-items">
+                <li><a href="#second-section" class="menu-item">Проекты</a></li>
+                <li><a href="#third-section" class="menu-item">Услуги</a></li>
+                <li><a href="#why-we" class="menu-item">Почему мы</a></li>
+                <li><a href="#footer" class="menu-item">Контакт</a></li>
               </ul>
             </div>
           </div>
@@ -48,8 +111,7 @@
         <h2 class="portfolio-heading">khomychuk.<br />art & design studio</h2>
         <img src="/img/kh.png" alt="" class="portfolio-image" />
         <h3 class="company-desc">
-          Khomychuk. Art&Design studio — Компанія, що займається дизайном
-          інтер’єрів.
+          Khomchuk. Art & Design Studio 一 дизайн интерьеров
         </h3>
         <div class="flex-container">
           <div class="left-side">
@@ -62,21 +124,16 @@
             <div class="column">
               <h4>задача</h4>
               <p>
-                Веб сайт для компанії, що займається дизайном інтер’єрів. Стояла
-                задача зробити простий, елегантний веб-сайт, такий собі шоукейс
-                проектів і інформацією про їх виконавців. На сайті представлені
-                проекти, а також інформація про самих дизайнерів. Дизайн
-                адаптований під мобільні пристрої та планшети.
+                Создать простой и элегантный веб-сайт, своеобразный шоукейс
+                проектов и с информацией про их исполнителей.
               </p>
             </div>
             <div class="column">
-              <h4>рішення</h4>
+              <h4>Решение</h4>
               <p>
-                Веб сайт для компанії, що займається дизайном інтер’єрів. Стояла
-                задача зробити простий, елегантний веб-сайт, такий собі шоукейс
-                проектів і інформацією про їх виконавців. На сайті представлені
-                проекти, а також інформація про самих дизайнерів. Дизайн
-                адаптований під мобільні пристрої та планшети.
+                На сайте структурно продемонстрированы все проекты компании.
+                Также была грамотно интегрирована информация про самих
+                дизайнеров.
               </p>
             </div>
           </div>
@@ -91,7 +148,22 @@
             <img src="/img/logo.svg" alt="5solutions" class="portfolio-logo" />
             <h2>experience design</h2>
             <img
-              src="/img/khomchuk-1.png"
+              src="/img/khomychuk1.jpg"
+              alt="Khomychuk"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/khomychuk2.png"
+              alt="Khomychuk"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/khomychuk3.png"
+              alt="Khomychuk"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/khomychuk4.png"
               alt="Khomychuk"
               class="portfolio-second-img"
             />
@@ -99,21 +171,69 @@
           <div class="s-right-side">
             <h3>ux solutions</h3>
             <p>
-              ● The site provides a closer look at our agency: what connects us,
-              what excites us, and—ultimately—what best represents our culture.
-              It includes the principles that drive our agency forward,
-              descriptions of our team members, fun facts about our agency, and
-              a culture reel that illuminates our collective vision.
+              ● Дизайн адаптирован под мобильные устройства и планшеты.
             </p>
             <h5>результат</h5>
-            <p class="result">● 75% повторення відвідування сайту</p>
-            <p class="result">● середня тривалість сесії 7 min</p>
-            <p class="result">● 3% показник відмов</p>
-            <a href="zakopane.html" class="last-external">Наступний проект →</a>
+            <p class="result">● 75% повторных посещений сайта</p>
+            <p class="result">● средняя длина сессии - 7 минут</p>
+            <p class="result">● всего 3% показатель отказов</p>
+            <a href="zakopane.html" class="last-external">Следующий проект →</a>
           </div>
         </div>
       </div>
     </section>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+        <img class="close-modal" src="/img/close-pink.png" data-micromodal-close/>
+          <div class="footer-grid-container">
+            <div class="footer-left-side">
+              <h3 class="contact-form-header footer-form-header">
+                Оставьте, пожалуйста, номер телефона и мы свяжемся <br />с Вами
+                в течение 30 секунд
+              </h3>
+              <form>
+                <div>
+                  <input
+                    type="text"
+                    class="name-input modal-input"
+                    placeholder="Ваше Имя"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    class="phone-input modal-input"
+                    placeholder="+380"
+                  />
+                </div>
+                <a href="" class="discuss-details-btn send-form-btn modal-send-btn"
+                  >отправить</a
+                >
+              </form>
+            </div>
+            <div class="footer-right-side">
+              <img src="/img/5s-logo.png" alt="" class="footer-img modal-img" />
+            </div>
+        </div>
+    </div>
+    <div class="notification">
+      <p class="notification-message">Ошибка! Вы ввели неверный номер!</p>
+      <span class="close-notification">
+        <img src="/img/close-white.svg" alt="close" />
+      </span>
+    </div>
   </body>
   <script src="/js/main.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script>
+      MicroModal.init();
+  </script>
 </html>

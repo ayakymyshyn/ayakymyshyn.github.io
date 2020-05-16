@@ -16,42 +16,103 @@
           <a href="/" class="main-logo portfolio-main-logo"
             ><img src="/img/logo.svg" alt=""
           /></a>
-          <ul class="main-menu">
+          <ul class="main-menu case-menu">
             <li><a href="#" class="menu-item">Профіль</a></li>
             <li><a href="#" class="menu-item">Послуги</a></li>
             <li><a href="#" class="menu-item">Проекти</a></li>
             <li><a href="#" class="menu-item">Контакт</a></li>
             <li>
-              <a href="#" class="btn-transparent menu-item"
+              <a data-micromodal-trigger="modal-1" class="btn-transparent menu-item case-transparent-btn"
                 >Проконсультуватися</a
               >
             </li>
           </ul>
           <div class="mobile-nav-trigger portfolio-mobile-trigger">
-            <span class="closed">menu</span>
+            <span class="closed case-trigger">menu</span>
             <span class="opened"
-              ><img src="/img/close-white.svg" alt=""
+              ><img src="/img/close-black.svg" alt=""
             /></span>
             <div class="mobile-menu-overlay">
               <ul class="mobile-menu-items">
-                <li><a href="">Профіль</a></li>
-                <li><a href="">Послуги</a></li>
-                <li><a href="">Проекти</a></li>
-                <li><a href="">Контакт</a></li>
+                <li>
+                  <a href="#second-section" class="menu-item mobile-menu-item"
+                    >Проекты</a
+                  >
+                </li>
+                <li>
+                  <a href="#third-section" class="menu-item mobile-menu-item"
+                    >Услуги</a
+                  >
+                </li>
+                <li>
+                  <a href="#why-we" class="menu-item mobile-menu-item"
+                    >Почему мы</a
+                  >
+                </li>
+                <li>
+                  <a href="#footer" class="menu-item mobile-menu-item"
+                    >Контакт</a
+                  >
+                </li>
+              </ul>
+              <div class="mobile-social-media">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <nav id="main-navigation" class="fixed-nav">
+          <a href="/" class="main-logo">
+            <img
+              src="/img/logo.svg"
+              alt="5Solutions"
+              class="desktop white fixed-logo" />
+            <img
+              src="/img/logo-mobile.png"
+              alt="5Solutions"
+              class="mobile white fixed-logo"
+          /></a>
+          <ul class="main-menu fixed-main-menu">
+            <li><a href="#second-section" class="menu-item">Проекты</a></li>
+            <li><a href="#third-section" class="menu-item">Услуги</a></li>
+            <li><a href="#why-we" class="menu-item">Почему мы</a></li>
+            <li><a href="#footer" class="menu-item">Контакт</a></li>
+            <li>
+              <a
+                href="#"
+                data-micromodal-trigger="modal-1"
+                class="btn-transparent menu-item"
+                >Проконсультироваться</a
+              >
+            </li>
+          </ul>
+          <div class="mobile-nav-trigger">
+            <span class="closed fixed-closed">menu</span>
+            <span class="opened"
+              ><img src="/img/close-black.svg" alt=""
+            /></span>
+            <div class="mobile-menu-overlay">
+              <ul class="mobile-menu-items">
+                <li><a href="#second-section" class="menu-item">Проекты</a></li>
+                <li><a href="#third-section" class="menu-item">Услуги</a></li>
+                <li><a href="#why-we" class="menu-item">Почему мы</a></li>
+                <li><a href="#footer" class="menu-item">Контакт</a></li>
               </ul>
             </div>
           </div>
         </nav>
         <div class="portfolio-nav">
           <a href="devops.html" class="back">← Назад</a>
-          <a href="exclusivestuff.html" class="back">Наступний проект →</a>
+          <a href="exclusivestuff.html" class="back">Следующий проект →</a>
         </div>
         <div class="portfolio-nav-underline"></div>
         <h2 class="portfolio-heading">ALL TECH/CONFES®</h2>
         <img src="/img/confes-portfolio.png" alt="" class="portfolio-image" />
         <h3 class="company-desc">
-          All technology conferences - інтернет-магазин білетів на технологічні
-          заходи
+          All Technology Conferences - интернет-магазин билетов на
+          технологические события
         </h3>
         <div class="flex-container">
           <div class="left-side">
@@ -63,22 +124,22 @@
             <div class="column">
               <h4>задача</h4>
               <p>
-                Many people want to reduce social networks use, but they are
-                afraid no longer being notified about local events happening
-                around them. However, searching for technology events often
-                requires them to use several different online sources, what is
-                often time consuming and laborious for many people.
+                Большинство людей хотят тратить меньше времени на соцсети, но
+                при этом бояться остаться в стороне от новых местных событий, о
+                которых обычно приходят уведомления. При этом самостоятельный
+                поиск технологических событий требует использовать несколько
+                разных источников в Интернете, что отнимает много времени и сил.
               </p>
             </div>
             <div class="column">
-              <h4>рішення</h4>
+              <h4>Решение</h4>
               <p>
-                Tech.co is a web application designed with a user centered
-                approach. Event Listings are customised around the user’s
-                location, topics, format, entry fee and rating. Furthermore the
-                user does not have to navigate through numerous technology
-                events before they find events happening around them. As a
-                result user can safe his time.
+                tech.co - это приложение, ориентированное на пользователя.
+                Списки событий настраиваются в зависимости от местоположения
+                пользователя, тем, платы, формата и рейтинга. Более того,
+                пользователю не нужно перемещаться по многочисленным
+                технологическим событиям, прежде чем они обнаружат, что события
+                происходят территориально рядом.
               </p>
             </div>
           </div>
@@ -93,29 +154,134 @@
             <img src="/img/logo.svg" alt="5solutions" class="portfolio-logo" />
             <h2>USER INTERVIEW INSIGHTS</h2>
             <img
-              src="/img/khomchuk-1.png"
-              alt="Khomychuk"
+              src="/img/tech1.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech2.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech3.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech4.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech5.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech6.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech7.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech8.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech9.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech10.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech11.png"
+              alt="TechCons"
+              class="portfolio-second-img"
+            />
+            <img
+              src="/img/tech12.png"
+              alt="TechCons"
               class="portfolio-second-img"
             />
           </div>
           <div class="s-right-side">
             <h3>ux solutions</h3>
             <p>
-              ● The site provides a closer look at our agency: what connects us,
-              what excites us, and—ultimately—what best represents our culture.
-              It includes the principles that drive our agency forward,
-              descriptions of our team members, fun facts about our agency, and
-              a culture reel that illuminates our collective vision.
+              ● Используя это приложение, пользователь бережет свое время и силы
+              на поиски нужных событий.
             </p>
             <h5>результат</h5>
             <p class="result">● 75% повторення відвідування сайту</p>
             <p class="result">● середня тривалість сесії 7 min</p>
             <p class="result">● 3% показник відмов</p>
-            <a href="exclusivestuff.html" class="last-external">Наступний проект →</a>
+            <a href="exclusivestuff.html" class="last-external"
+              >Наступний проект →</a
+            >
           </div>
         </div>
       </div>
     </section>
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+        <img class="close-modal" src="/img/close-pink.png" data-micromodal-close/>
+          <div class="footer-grid-container">
+            <div class="footer-left-side">
+              <h3 class="contact-form-header footer-form-header">
+                Оставьте, пожалуйста, номер телефона и мы свяжемся <br />с Вами
+                в течение 30 секунд
+              </h3>
+              <form>
+                <div>
+                  <input
+                    type="text"
+                    class="name-input modal-input"
+                    placeholder="Ваше Имя"
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    class="phone-input modal-input"
+                    placeholder="+380"
+                  />
+                </div>
+                <a href="" class="discuss-details-btn send-form-btn modal-send-btn"
+                  >отправить</a
+                >
+              </form>
+            </div>
+            <div class="footer-right-side">
+              <img src="/img/5s-logo.png" alt="" class="footer-img modal-img" />
+            </div>
+        </div>
+    </div>
+    <div class="notification">
+      <p class="notification-message">Ошибка! Вы ввели неверный номер!</p>
+      <span class="close-notification">
+        <img src="/img/close-white.svg" alt="close" />
+      </span>
+    </div>
   </body>
   <script src="/js/main.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script>
+      MicroModal.init();
+  </script>
 </html>

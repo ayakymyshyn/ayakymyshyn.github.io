@@ -32,6 +32,18 @@ window.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('allow-scroll');
         removeClassFromElements([logo, baggedBtn], 'hidden');
     });
+
+    let mobileMenuItems = document.querySelectorAll('a.menu-item.mobile-menu-item');
+
+    mobileMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('visible');
+            closeIcon.classList.remove('db');
+            document.body.classList.add('allow-scroll');
+            removeClassFromElements([logo, baggedBtn], 'hidden');
+        });
+    });
+
     for (let i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function () {
             var panel = this.nextElementSibling;
@@ -59,7 +71,7 @@ window.addEventListener('DOMContentLoaded', () => {
         this.oldScroll = this.scrollY;
 
 
-        if (window.pageYOffset > (thirdHeading.offsetTop - 300)) {
+        if (thirdHeading && window.pageYOffset > (thirdHeading.offsetTop - 300)) {
             removeClass(thirdSection, 'black-section');
             accordions.forEach(accordion => {
                 removeClass(accordion, 'border-pink');
@@ -68,12 +80,12 @@ window.addEventListener('DOMContentLoaded', () => {
             removeClassFromElements([thirdHeading, activePanel], 'color-pink');
         }
         else {
-            addClass(thirdSection, 'black-section');
+            thirdSection && addClass(thirdSection, 'black-section');
             accordions.forEach(accordion => {
                 addClass(accordion, 'border-pink');
                 addClass(accordion, 'color-pink');
             });
-            addClassToElements([thirdHeading, activePanel], 'color-pink');
+            activePanel && thirdHeading && addClassToElements([thirdHeading, activePanel], 'color-pink');
         }
     });
 
@@ -146,13 +158,35 @@ window.addEventListener('DOMContentLoaded', () => {
     let notification = document.querySelector('.notification');
     let notificationMessage = document.querySelector('.notification-message');
     let closeNotification = document.querySelector('.close-notification img');
+    let modalSendButton = document.querySelector('.modal-send-btn');
+    let modalName = document.querySelector('input.name-input.modal-input');
+    let modalPhone = document.querySelector('input.phone-input.modal-input');
 
     let token = '1263033682:AAF9Yq8t1x2hbeqpZ_TVXsxAbNkg1L8vt-s';
     let chat_id = '-1001320284865';
 
-    sendButton.addEventListener('click', (e) => {
+
+    modalSendButton && modalSendButton.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log(phone.value.replace(' ', '').replace('(', '').replace(')', ''));
+        console.log(modalPhone.value);
+        if (isEmpty(modalName.value) || isEmpty(modalPhone.value.replace(' ', '').replace('(', '').replace(')', ''))) {
+            notificationMessage.innerHTML = "Поля не могут быть пустыми."
+            notification.classList.add('db');
+        } else if (isPhoneIncorrect(phone.value)) {
+            notificationMessage.innerHTML = "Неверный формат номера телефона"
+            notification.classList.add('db');
+        } else {
+            let text = `Ім'я: ${modalName.value}, Номер телефону: ${modalPhone.value}`;
+            sendMessage(token, chat_id, text, () => {
+                notificationMessage.innerHTML = "Сообщение отправлено успешно!"
+                notification.classList.add('db');
+            });
+            removeClass(notification, 'db');
+        }
+    });
+
+    sendButton && sendButton.addEventListener('click', (e) => {
+        e.preventDefault();
         console.log(phone.value);
         if (isEmpty(name.value) || isEmpty(phone.value.replace(' ', '').replace('(', '').replace(')', ''))) {
             notificationMessage.innerHTML = "Поля не могут быть пустыми."
@@ -170,7 +204,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    closeNotification.addEventListener('click', () => {
+    closeNotification && closeNotification.addEventListener('click', () => {
         removeClass(notification, 'db');
     });
 
