@@ -172,7 +172,7 @@ window.addEventListener('DOMContentLoaded', () => {
         if (isEmpty(modalName.value) || isEmpty(modalPhone.value)) {
             notificationMessage.innerHTML = "Поля не могут быть пустыми."
             notification.classList.add('db');
-        } else if (isPhoneIncorrect(phone.value)) {
+        } else if (isPhoneIncorrect(modalPhone.value)) {
             notificationMessage.innerHTML = "Неверный формат номера телефона"
             notification.classList.add('db');
         } else {
@@ -238,7 +238,6 @@ const sendMessage = async (token, chatID, text, callback) => {
     console.log(statusData);
 };
 const isPhoneIncorrect = phone => {
-    console.log(phone.length);
     return phone.length < 10 || phone.length > 21;
 };
 
