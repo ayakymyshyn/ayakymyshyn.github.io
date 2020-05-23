@@ -103,10 +103,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let token = '1263033682:AAF9Yq8t1x2hbeqpZ_TVXsxAbNkg1L8vt-s';
     let chat_id = '-1001320284865';
 
-
     modalSendButton && modalSendButton.addEventListener('click', (e) => {
         e.preventDefault();
-        console.log(modalPhone.value);
         if (isEmpty(modalName.value) || isEmpty(modalPhone.value)) {
             notificationMessage.innerHTML = "Поля не могут быть пустыми."
             notification.classList.add('db');
@@ -120,6 +118,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 notification.classList.add('db');
             });
             removeClass(notification, 'db');
+        }
+
+        if (notification.classList.contains("db")) {
+            setTimeout(() => {
+                removeClass(notification, 'db');
+            }, 2000);
         }
     });
 
@@ -139,6 +143,12 @@ window.addEventListener('DOMContentLoaded', () => {
                 notification.classList.add('db');
             });
             removeClass(notification, 'db');
+        }
+
+        if (notification.classList.contains("db")) {
+            setTimeout(() => {
+                removeClass(notification, 'db');
+            }, 2000);
         }
     });
 
