@@ -89,66 +89,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    let fiveReasonsImages = document.querySelectorAll('.first-image');
-    let aboutUsDetails = document.querySelector('.about-us-details');
-    let aboutUsList = document.querySelectorAll('.about-us-list li');
-    let paragraph = document.querySelector(".about-us-description p");
-
-    let texts = [
-        "Вам больше не придется тратить десятки часов на поиски других  специалистов. Мы  занимаемся  дизайном, разработкой и продвижением сайтов комплексно и с гарантиями. ",
-        "Предпочитаем  не перечислять заслуги, а демонстрировать опыт на деле. Например, можете взглянуть  на наши реализованные кейсы и самостоятельно убедиться в  навыках и способностях команды", 
-        "Такой сайт будет только у Вас и у Майкла Джексона - шутка :) Но с долей правды. Наличие в команде опытного дизайнера подразумевает разработку авторского дизайна, которого вы больше не встретите на просторах Интернета. Авторский дизайн позволяет выделиться на фоне конкурентов и стать заметнее и интереснее  для потенциальных клиентов. ", 
-        "Мы знаем последние тренды в сфере маркетинга и дизайна, что позволяет создавать стильные и в тоже время конверсионные сайты. То есть сайты, которые не только визуально привлекательны, но и потенциально прибыльные.", 
-        "При заказе  сайта любого типа вы  получаете гарантию на 6 месяцев технической поддержки В ПОДАРОК! Если проявите интерес -  научим и покажем вам  как самостоятельно редактировать контент на сайте и управлять им. Если же вы  оформите заявку на заказ  интернет-магазина до 17.05  - сможете получить бесплатную  техническую  поддержку сайта на целый год"
-    ];
-
-    let mouseX = 0;
-    let mouseY = 0;
-
-    let imgX = 0;
-    let imgY = 6000;
-
-    let speed = 0.05;
-    let targetOffset = 0;
-
-
-    const animate = () => {
-        if (screen.width > 450) {
-            let distX = 0;
-            let distY = 0;
-            if (mouseX > 0 && mouseY > 0) {
-                distX = mouseX - imgX;
-                distY = mouseY - imgY;
-            }
-            imgX = imgX + (distX * speed);
-            imgY = imgY + (distY * speed);
-            fiveReasonsImages.forEach(img => {
-                img.style.left = imgX + "px";
-                img.style.top = imgY + "px";
-            });
-        }
-    };
-
-    const setDefaultPosition = () => {
-        fiveReasonsImages.forEach(img => {
-            img.style.left = -2000 + "px";
-        });
-    };
-
-    aboutUsList.forEach((li, idx) => {
-        li.addEventListener('mousemove', (e) => {
-            mouseX = e.pageX;
-            mouseY = e.pageY;
-            animate();
-        });
-        li.addEventListener('mouseout', () => {
-            setDefaultPosition();
-        });
-        li.addEventListener('click', () => {
-            paragraph.innerHTML = texts[idx];
-        })
-    });
-
     // sending message to a Telegram
     let name = document.querySelector('input.name-input');
     let phone = document.querySelector('input.phone-input');
