@@ -119,12 +119,9 @@ window.addEventListener('DOMContentLoaded', () => {
             });
             removeClass(notification, 'db');
         }
-
-        if (notification.classList.contains("db")) {
-            setTimeout(() => {
-                removeClass(notification, 'db');
-            }, 2000);
-        }
+        setTimeout(() => {
+            removeClass(notification, 'db');
+        }, 2000);
     });
 
     sendButton && sendButton.addEventListener('click', (e) => {
@@ -144,12 +141,9 @@ window.addEventListener('DOMContentLoaded', () => {
             });
             removeClass(notification, 'db');
         }
-
-        if (notification.classList.contains("db")) {
-            setTimeout(() => {
-                removeClass(notification, 'db');
-            }, 2000);
-        }
+        setTimeout(() => {
+            removeClass(notification, 'db');
+        }, 2000);
     });
 
     closeNotification && closeNotification.addEventListener('click', () => {
